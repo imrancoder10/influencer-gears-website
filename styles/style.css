@@ -1,64 +1,201 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 .poppins-font {
     font-family: "Poppins", sans-serif;
-  }
+}
 
-  /* navbar section starts here  */
-  .navbar{
+/* navbar section starts here  */
+.navbar {
     max-width: 1300px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
     margin-top: 25px;
+    margin-bottom: 50px;
+    padding: 0px 10px;
     /* border: 2px solid red; */
-  }
-  .hamburger-icon,.checkout-icon{
+}
+
+.hamburger-icon,
+.checkout-icon {
     display: none;
-  }
-  .navbar-links-container{
+}
+
+.navbar-links-container {
     display: flex;
     align-items: center;
-  }
-  .navbar-links-container li{
+}
+
+.navbar-links-container li {
     list-style: none;
-  }
-  .link{
+}
+
+.link {
     text-decoration: none;
     margin-right: 15px;
     font-size: 1rem;
     font-weight: 500;
-  }
-  .navbar-title{
+}
+
+.navbar-title {
     font-size: 1.5rem;
     font-weight: 700;
-  }
-  /* navbar section ends here  */
+}
+
+/* navbar section ends here  */
+
+/* banner section starts here  */
+.banner-container {
+    max-width: 1300px;
+    /* height: 500px; */
+    padding-right: 20px;
+    margin: 0 auto;
+    border: 2px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner-content{
+    max-width: 47%;
+    padding: 20px;
+}
+.banner-img-container {
+    max-width: 47%;
+}
+
+.banner-title {
+    font-size: 3.25rem;
+    font-weight: 600;
+    color: #3a3a3a;
+}
+
+.banner-describtion {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #3a3a3a;
+}
+
+.btn {
+    background-color: #E02C6D;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 40px;
+    margin-top: 15px;
+}
+
+.background-img-continer{
+    background-image: url('../images/Circle design.svg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+    /* border: 2px solid red; */
+    /* top: 500px; */
+}
+.camera-img-container{
+    max-width: 75%;
+    /* border: 2px solid green; */
+    position: relative;
+    left: 130px;
+}
+.camera-img{
+    max-width: 100%;
+}
+
+/* banner section ends here  */
 
 
 
-  @media screen and (max-width: 576px) {
-    .navbar-links-container{
+@media screen and (max-width: 576px) {
+    .navbar-links-container {
         display: none;
     }
-    .hamburger-icon,.checkout-icon{
+
+    .hamburger-icon,
+    .checkout-icon {
         display: block;
     }
-    .navbar{
+
+    .navbar {
         /* max-width: 1300px; */
         display: flex;
         justify-content: space-around;
-      }
-    
-  }
+    }
 
-  @media screen and (min-width: 576px) and (max-width: 992px){
-    .navbar{
+    .navbar-title {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    /* banner section start */
+
+    .banner-container{
+        flex-direction: column;
+        padding-right: 0px;
+    }
+
+    .camera-img-container{
+        position: relative;
+        left: 60px;
+    }
+    .banner-content{
+        width: 100%;
+        border: 2px solid red;
+        padding: 0px;
+    }
+
+    .banner-title{
+        font-size: 1.75rem;
+        text-align: center;
+    }
+    
+    .banner-describtion {
+        font-size: 0.90rem;
+        font-weight: 500;
+        color: #3a3a3a;
+        text-align: center;
+    }
+    .banner-content{
+        max-width: 100%;
+        padding: 20px;
+        margin: 0px auto 20px auto;
+    }
+    .banner-img-container {
+        max-width: 100%;
+    }
+    .background-img-continer{
+        background-position: center;
+    }
+
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .navbar-links-container {
+        display: none;
+    }
+
+    .hamburger-icon,
+    .checkout-icon {
+        display: block;
+    }
+
+    .navbar {
         justify-content: space-evenly;
     }
-  }
+
+    /* banner section start */
+    .banner-title{
+        font-size: 2rem;
+    }
+    .camera-img-container{
+        position: relative;
+        left: 120px;
+    }
+}
